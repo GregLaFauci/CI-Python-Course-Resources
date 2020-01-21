@@ -12,8 +12,7 @@ class Reader:
         extension = os.path.splitext(filename)[1]
         opener = extension_map.get(extension, open)
         self.f = opener(filename, 'rt')
-        self.filename = filename
-        self.f = open(filename, 'r+')
+       
         
     def close(self):
         self.f.close()
